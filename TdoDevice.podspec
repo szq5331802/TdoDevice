@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TdoDevice"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "双动设备"
   spec.description  = "双动设备连接sdk"
   spec.homepage     = "https://github.com/szq5331802/TdoDevice"
