@@ -1,0 +1,6 @@
+
+
+@interface BindViewController : UIViewController
+
+@end
+

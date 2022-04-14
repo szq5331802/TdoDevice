@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M6i-V1-38e">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0Lz-mm-os7">
+            <objects>
+                <navigationController storyboardIdentifier="WelNavigationController" id="M6i-V1-38e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EVY-We-unM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="94e-IK-Brx" kind="relationship" relationship="rootViewController" id="2OR-bW-LV4"/>
+                        <segue destination="egV-kW-EDa" kind="show" identifier="bindDevice" id="xSn-aE-EuS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5y-fL-bEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588" y="-572"/>
+        </scene>
+        <!--我的设备-->
+        <scene sceneID="qXq-TV-7tb">
+            <objects>
+                <viewController id="94e-IK-Brx" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="77M-Bi-eXU"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLm-ik-ftR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="roc-RN-k8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1Y-lB-kaF">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c1Y-lB-kaF" firstAttribute="top" secondItem="77M-Bi-eXU" secondAttribute="bottom" id="JpW-71-2bu"/>
+                            <constraint firstItem="dLm-ik-ftR" firstAttribute="top" secondItem="c1Y-lB-kaF" secondAttribute="bottom" id="X58-NN-0En"/>
+                            <constraint firstItem="c1Y-lB-kaF" firstAttribute="leading" secondItem="roc-RN-k8H" secondAttribute="leading" id="YQp-IP-12N"/>
+                            <constraint firstAttribute="trailing" secondItem="c1Y-lB-kaF" secondAttribute="trailing" id="u34-zc-pCw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的设备" id="Yip-2u-sd4"/>
+                    <connections>
+                        <outlet property="mViewRoot" destination="c1Y-lB-kaF" id="feT-lJ-hHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EH-2q-BMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.69565217391306" y="-571.46739130434787"/>
+        </scene>
+        <!--绑定设备-->
+        <scene sceneID="LLz-hs-RNO">
+            <objects>
+                <viewController id="egV-kW-EDa" customClass="BindViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yXN-ia-o7X"/>
+                        <viewControllerLayoutGuide type="bottom" id="u12-dz-kvk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7NX-ia-nuO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pR-pS-xRI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2pR-pS-xRI" firstAttribute="leading" secondItem="7NX-ia-nuO" secondAttribute="leading" id="L7t-gi-y3S"/>
+                            <constraint firstAttribute="bottom" secondItem="2pR-pS-xRI" secondAttribute="bottom" id="l8A-vC-O1X"/>
+                            <constraint firstItem="2pR-pS-xRI" firstAttribute="top" secondItem="yXN-ia-o7X" secondAttribute="bottom" id="sQx-dp-bw0"/>
+                            <constraint firstAttribute="trailing" secondItem="2pR-pS-xRI" secondAttribute="trailing" id="xB3-JL-zmw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绑定设备" id="njV-o6-buC"/>
+                    <connections>
+                        <outlet property="mViewRoot" destination="2pR-pS-xRI" id="xJd-dT-fAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xo1-Q4-qs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
