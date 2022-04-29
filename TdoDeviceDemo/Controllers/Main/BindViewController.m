@@ -5,7 +5,7 @@
 @interface BindViewController ()
 @property (weak, nonatomic) IBOutlet UIView *mViewRoot;
 
-@property (nonatomic, retain) NSArray<DeviceInfo*>* deviceList;
+@property (nonatomic, retain) NSMutableArray<DeviceInfo*>* deviceList;
 @end
 
 @implementation BindViewController
@@ -47,7 +47,19 @@
 }
 
 - (void)updateUserDevice {
-    self.deviceList = [[TdoDeviceApi getInstance] getDeviceList];
+    self.deviceList = [NSMutableArray new];
+    DeviceInfo* device = [DeviceInfo new];
+    device.id = 3;
+    device.typeId = 1;
+    device.name = @"欧瑞斯ORAYS运动手表星火系列";
+    device.desc = @"运动手表";
+    DeviceInfo* device1 = [DeviceInfo new];
+    device1.id = 4;
+    device1.typeId = 2;
+    device1.name = @"欧瑞斯ORAYS运动小秘";
+    device1.desc = @"运动小秘";
+    [self.deviceList addObject:device];
+    [self.deviceList addObject:device1];
     
     int row = 3;
     CGFloat margin = 10;
@@ -78,13 +90,11 @@
         
         if (device) {
             [btn setTitle:@"" forState:UIControlStateNormal];
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                NSURL* imageURL = [NSURL URLWithString:device.iconUrl];
-                NSData* imageData = [NSData dataWithContentsOfURL:imageURL];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [btn setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
-                });
-            });
+            if (device.id == 3) {
+                [btn setImage:[UIImage imageNamed:@"watch"] forState:UIControlStateNormal];
+            } else if (device.id == 4) {
+                [btn setImage:[UIImage imageNamed:@"run_spirit"] forState:UIControlStateNormal];
+            }
         }
     }
     

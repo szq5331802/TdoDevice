@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0456B009280548D500DEDF70 /* BindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0456B007280548D500DEDF70 /* BindViewController.m */; };
+		04C1C7C4281BCAD5001C8420 /* TdoDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C1C7C3281BCAD5001C8420 /* TdoDevice.framework */; };
+		04C1C7C6281BCAFF001C8420 /* TdoDeviceB.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04C1C7C5281BCAFF001C8420 /* TdoDeviceB.bundle */; };
+		04C1C7CB281BD7CD001C8420 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1C7CA281BD7CD001C8420 /* OpenUDID.m */; };
+		04C1C7D4281BE50F001C8420 /* run_spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C1C7D2281BE50F001C8420 /* run_spirit.png */; };
+		04C1C7D5281BE50F001C8420 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C1C7D3281BE50F001C8420 /* watch.png */; };
 		18F15B54225600A4001A5BCC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F15B53225600A4001A5BCC /* MainViewController.m */; };
 		31F7AC1DA756C3DAF539C78B /* libPods-TdoDeviceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D8C74FA9D4EA212F40AF1D /* libPods-TdoDeviceDemo.a */; };
 		8B817D99218DA8A100FFB881 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B817D9B218DA8A100FFB881 /* Localizable.strings */; };
@@ -21,6 +26,12 @@
 /* Begin PBXFileReference section */
 		0456B007280548D500DEDF70 /* BindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindViewController.m; sourceTree = "<group>"; };
 		0456B008280548D500DEDF70 /* BindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewController.h; sourceTree = "<group>"; };
+		04C1C7C3281BCAD5001C8420 /* TdoDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TdoDevice.framework; path = TdoDevice/TdoDevice.framework; sourceTree = "<group>"; };
+		04C1C7C5281BCAFF001C8420 /* TdoDeviceB.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TdoDeviceB.bundle; path = TdoDevice/TdoDeviceB.bundle; sourceTree = "<group>"; };
+		04C1C7C9281BD7CD001C8420 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		04C1C7CA281BD7CD001C8420 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		04C1C7D2281BE50F001C8420 /* run_spirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run_spirit.png; sourceTree = "<group>"; };
+		04C1C7D3281BE50F001C8420 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
 		1890295D226965A100E930EF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		18EB714321C9F33C005BE6DF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		18F15B52225600A4001A5BCC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -48,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1C7C4281BCAD5001C8420 /* TdoDevice.framework in Frameworks */,
 				31F7AC1DA756C3DAF539C78B /* libPods-TdoDeviceDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +67,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C1C7C8281BD7CD001C8420 /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				04C1C7C9281BD7CD001C8420 /* OpenUDID.h */,
+				04C1C7CA281BD7CD001C8420 /* OpenUDID.m */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+		04C1C7D1281BE50F001C8420 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04C1C7D2281BE50F001C8420 /* run_spirit.png */,
+				04C1C7D3281BE50F001C8420 /* watch.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		237D2CC61FE7AAFD00E77113 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +108,7 @@
 			children = (
 				8BBBE30C218FF6AF0044AB05 /* AppDelegate */,
 				237D2CE51FE7AE0200E77113 /* Views */,
+				04C1C7C8281BD7CD001C8420 /* OpenUDID */,
 				237D2CEF1FE7AE2000E77113 /* Controllers */,
 				237D2CF91FE7AE5C00E77113 /* Resources */,
 				8BBBE2FC218FE3790044AB05 /* Supporting Files */,
@@ -104,6 +135,7 @@
 		237D2CF91FE7AE5C00E77113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04C1C7D1281BE50F001C8420 /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -111,6 +143,8 @@
 		7E3AF6D700052E30BC1F3927 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04C1C7C3281BCAD5001C8420 /* TdoDevice.framework */,
+				04C1C7C5281BCAFF001C8420 /* TdoDeviceB.bundle */,
 				18EB714321C9F33C005BE6DF /* CoreMotion.framework */,
 				8BBBE2FE218FE6630044AB05 /* UIKit.framework */,
 				D9D8C74FA9D4EA212F40AF1D /* libPods-TdoDeviceDemo.a */,
@@ -181,7 +215,7 @@
 				237D2CCB1FE7AAFD00E77113 /* Sources */,
 				237D2CCC1FE7AAFD00E77113 /* Frameworks */,
 				237D2CCD1FE7AAFD00E77113 /* Resources */,
-				97A8AE489D51DEF076F018E6 /* [CP] Copy Pods Resources */,
+				C4AE6020317E61F2A4D41533 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,9 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1C7D4281BE50F001C8420 /* run_spirit.png in Resources */,
 				8BBBE2F5218FE19F0044AB05 /* LaunchScreen.storyboard in Resources */,
 				8B817D99218DA8A100FFB881 /* Localizable.strings in Resources */,
+				04C1C7C6281BCAFF001C8420 /* TdoDeviceB.bundle in Resources */,
 				8BAE6DB821951CB00043309C /* Main.storyboard in Resources */,
+				04C1C7D5281BE50F001C8420 /* watch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +312,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97A8AE489D51DEF076F018E6 /* [CP] Copy Pods Resources */ = {
+		C4AE6020317E61F2A4D41533 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,6 +340,7 @@
 				8BBBE317218FF6DF0044AB05 /* main.m in Sources */,
 				8BBBE313218FF6AF0044AB05 /* AppDelegate.m in Sources */,
 				18F15B54225600A4001A5BCC /* MainViewController.m in Sources */,
+				04C1C7CB281BD7CD001C8420 /* OpenUDID.m in Sources */,
 				0456B009280548D500DEDF70 /* BindViewController.m in Sources */,
 				8B9870D021A554EE008C7ED9 /* ToodoSwift.swift in Sources */,
 			);
@@ -442,6 +480,10 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2B8CYN8XFZ;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TdoDevice",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "TdoDeviceDemo/Supporting Files/Info.plist";
@@ -468,6 +510,10 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2B8CYN8XFZ;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TdoDevice",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "TdoDeviceDemo/Supporting Files/Info.plist";

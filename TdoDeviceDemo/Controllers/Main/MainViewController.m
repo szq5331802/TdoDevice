@@ -1,7 +1,20 @@
 
 #import "MainViewController.h"
 #import "BindViewController.h"
+#import "OpenUDID.h"
 #import <TdoDevice/TdoDeviceApi.h>
+
+
+static NSString* const kOpenUDIDDescription = @"OpenUDID_with_iOS6_Support";
+static NSString* const kOpenUDIDKey = @"OpenUDID";
+static NSString* const kOpenUDIDSlotKey = @"OpenUDID_slot";
+static NSString* const kOpenUDIDAppUIDKey = @"OpenUDID_appUID";
+static NSString* const kOpenUDIDTSKey = @"OpenUDID_createdTS";
+static NSString* const kOpenUDIDOOTSKey = @"OpenUDID_optOutTS";
+static NSString* const kOpenUDIDDomain = @"org.OpenUDID";
+static NSString* const kOpenUDIDSlotPBPrefix = @"org.OpenUDID.slot.";
+static int const kOpenUDIDRedundancySlots = 100;
+
 
 @interface MainViewController () <TdoDeviceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *mViewRoot;
@@ -29,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[TdoDeviceApi getInstance] initWithAppKey:@"10000" appSecret:@"aosaoiopajfpiafdsaoagwed" debug:YES delegate:self];
-    [[TdoDeviceApi getInstance] getUserDeviceList:@"testIos1"];
+    [[TdoDeviceApi getInstance] getUserDeviceList:[OpenUDID value]];
     [self updateUserDevice];
 }
 
@@ -68,13 +81,11 @@
         
         if (device) {
             [btn setTitle:@"" forState:UIControlStateNormal];
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                NSURL* imageURL = [NSURL URLWithString:device.deviceInfo.iconUrl];
-                NSData* imageData = [NSData dataWithContentsOfURL:imageURL];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [btn setImage:[UIImage imageWithData:imageData] forState:UIControlStateNormal];
-                });
-            });
+            if (device.devId == 3) {
+                [btn setImage:[UIImage imageNamed:@"watch"] forState:UIControlStateNormal];
+            } else if (device.devId == 4) {
+                [btn setImage:[UIImage imageNamed:@"run_spirit"] forState:UIControlStateNormal];
+            }
         } else {
             [btn setImage:nil forState:UIControlStateNormal];
             [btn setTitle:@"添加" forState:UIControlStateNormal];

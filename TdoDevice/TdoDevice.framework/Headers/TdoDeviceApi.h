@@ -50,5 +50,14 @@
  */
 - (void)connect:(UINavigationController*_Nonnull)na device:(UserDevice*_Nonnull)device;
 
+/**
+ * 设置设备别名
+ * @param devType devType
+ * @param devId devId
+ * @param devBT devBT
+ * @param alias 设备别名，长度不超过100
+ */
+- (BOOL)setUserDeviceAlias:(int)devType devId:(int)devId devBT:(NSString*_Nonnull)devBT alias:(NSString*_Nonnull)alias;
+
 @end
 

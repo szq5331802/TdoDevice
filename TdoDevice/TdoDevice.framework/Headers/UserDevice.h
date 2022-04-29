@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString* swId;         //软件ID
 @property (nonatomic, copy) NSString* moduleNum;    //设备型号
 @property (nonatomic, copy) NSString* sn;           //流水号
+@property (nonatomic, copy) NSString* alias;           //设备别名
 @property (nonatomic, retain) DeviceInfo* deviceInfo;
 
 @end
